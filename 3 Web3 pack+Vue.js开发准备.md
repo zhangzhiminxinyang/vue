@@ -29,59 +29,57 @@
 
 2. 选择nvm安装路径
 
-![安装路径选择](F:\vue\vue\images\NVM_install_2.png)
+![安装路径选择](https://github.com/zhangzhiminxinyang/vue/blob/master/images/NVM_install_2.png)
 
 3. 设置nvm快捷方式位置
 
-![设置nvm快捷方式位置](F:\vue\vue\images\NVM_install_3.png)
+![设置nvm快捷方式位置](https://github.com/zhangzhiminxinyang/vue/blob/master/images/NVM_install_3.png)
 
 4. 开始安装
 
-![开始安装](F:\vue\vue\images\NVM_install_4.png)
+![开始安装](https://github.com/zhangzhiminxinyang/vue/blob/master/images/NVM_install_4.png)
 
 5. nvm安装完成
 
-![nvm安装完成](F:\vue\vue\images\NVM_install_6.png)
+![nvm安装完成](https://github.com/zhangzhiminxinyang/vue/blob/master/images/NVM_install_6.png)
 
 6. 检查环境变量路径配置是否正确
 
 7. 启动运行窗口
 
-![启动运行窗口](F:\vue\vue\images\NVM_install_7.png)
+![启动运行窗口](https://github.com/zhangzhiminxinyang/vue/blob/master/images/NVM_install_7.png)
 
 8. 检测nvm是否安装成功
 
-![nvm安装成功标识](F:\vue\vue\images\NVM_install_8.png)
+![nvm安装成功标识](https://github.com/zhangzhiminxinyang/vue/blob/master/images/NVM_install_8.png)
 
 9. 关闭运行窗口，配置nvm配置文件
 
 10. 配置nvm配置文件。默认情况下，使用nvm安装node时会连接国外服务器，速度较慢，因此通过修改配置文件方式改成连接国内的镜像服务器。打开nvm安装目录的配置文件settings.txt，进行如下配置。
 
-![配置国内镜像服务器](F:\vue\vue\images\NVM_install_9.png)
-
-
+![配置国内镜像服务器](https://github.com/zhangzhiminxinyang/vue/blob/master/images/NVM_install_9.png)
 
 ## 2.3 安装Nodejs和npm
 
 1. 启动运行窗口，查看可用nodejs版本
 
-![查看可用nodejs版本](F:\vue\vue\images\NVM_install_10.png)
+![查看可用nodejs版本](https://github.com/zhangzhiminxinyang/vue/blob/master/images/NVM_install_10.png)
 
 2. 选择待安装版本进行安装
 
-![指定nodejs版本进行安装](F:\vue\vue\images\NVM_install_11.png)
+![指定nodejs版本进行安装](https://github.com/zhangzhiminxinyang/vue/blob/master/images/NVM_install_11.png)
 
 3. 检测nodejs和npm是否安装成功
 
-![检测nodejs和npm是否安装成功](F:\vue\vue\images\NVM_install_12.png)
+![检测nodejs和npm是否安装成功](https://github.com/zhangzhiminxinyang/vue/blob/master/images/NVM_install_12.png)
 
 ## 2.4 安装Webpack
 
 1. 全局安装Webpack
 
-   ![安装Webpack](F:\vue\vue\images\webpack_install_1.png)
+   ![安装Webpack](https://github.com/zhangzhiminxinyang/vue/blob/master/images/webpack_install_1.png)
 
 2. 检测Webpack是否安装成功
 
-   ![检测Webpack是否安装成功](F:\vue\vue\images\webpack_install_2.png)
+   ![检测Webpack是否安装成功](https://github.com/zhangzhiminxinyang/vue/blob/master/images/webpack_install_2.png)
 
