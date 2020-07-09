@@ -19,7 +19,7 @@
 
 ### 下载：https://github.com/coreybutler/nvm-windows/releases 
 
- 下载nvm-setup.zip ，此版本为安装版本，本次实验下载的是1.1.7
+ 下载nvm-setup.zip ，此版本为安装版本
 
 ## 2.2 安装NVM
 
@@ -51,11 +51,24 @@
 
 8. 检测nvm是否安装成功
 
+   ```
+   nvm
+   ```
+
 ![nvm安装成功标识](https://github.com/zhangzhiminxinyang/vue/blob/master/images/NVM_install_8.png)
 
 9. 关闭运行窗口，配置nvm配置文件
 
 10. 配置nvm配置文件。默认情况下，使用nvm安装node时会连接国外服务器，速度较慢，因此通过修改配置文件方式改成连接国内的镜像服务器。打开nvm安装目录的配置文件settings.txt，进行如下配置。
+
+    ```
+    root: D:\nvm
+    path: D:\nodejs
+    arch: 64
+    proxy: none
+    node_mirror: https://npm.taobao.org/mirrors/node/
+    npm_mirror: https://npm.taobao.org/mirrors/npm/
+    ```
 
 ![配置国内镜像服务器](https://github.com/zhangzhiminxinyang/vue/blob/master/images/NVM_install_9.png)
 
@@ -63,13 +76,27 @@
 
 1. 启动运行窗口，查看可用nodejs版本
 
+   ```
+   nvm list available
+   ```
+
 ![查看可用nodejs版本](https://github.com/zhangzhiminxinyang/vue/blob/master/images/NVM_install_10.png)
 
 2. 选择待安装版本进行安装
 
+   ```
+   nvm install 14.5.0
+   ```
+
 ![指定nodejs版本进行安装](https://github.com/zhangzhiminxinyang/vue/blob/master/images/NVM_install_11.png)
 
 3. 检测nodejs和npm是否安装成功
+
+   ```
+   nvm use 14.5.0
+   node -v
+   npm -v
+   ```
 
 ![检测nodejs和npm是否安装成功](https://github.com/zhangzhiminxinyang/vue/blob/master/images/NVM_install_12.png)
 
@@ -77,19 +104,35 @@
 
 1. 全局安装Webpack
 
-   ![安装Webpack](https://github.com/zhangzhiminxinyang/vue/blob/master/images/webpack_install_1.png)
+   ```
+   npm install webpack webpack-cli -g
+   ```
+
+![安装Webpack](https://github.com/zhangzhiminxinyang/vue/blob/master/images/webpack_install_1.png)
 
 2. 检测Webpack是否安装成功
 
-   ![检测Webpack是否安装成功](https://github.com/zhangzhiminxinyang/vue/blob/master/images/webpack_install_2.png)
+   ```
+   webpack -v
+   ```
+
+![检测Webpack是否安装成功](https://github.com/zhangzhiminxinyang/vue/blob/master/images/webpack_install_2.png)
 
 ## 2.5 全局安装Vue.js
 
 1. 安装Vue.js
 
+   ```
+   npm install vue vue-cli -g
+   ```
+
     ![安装](https://github.com/zhangzhiminxinyang/vue/blob/master/images/vue_install_1.png)
 
 2. 检测是否安装成功
+
+   ```
+   vue -V
+   ```
 
    ![测试](https://github.com/zhangzhiminxinyang/vue/blob/master/images/vue_install_2.png)
 
@@ -97,16 +140,22 @@
 
 1. 运行窗口切换至项目目录，创建一个基于Webpack的项目
 
-```
-vue init webpack hello
-```
+   ```
+   vue init webpack hello
+   ```
+
+![测试](https://github.com/zhangzhiminxinyang/vue/blob/master/images/vue_exe_2.png)
+
+![测试](https://github.com/zhangzhiminxinyang/vue/blob/master/images/vue_exe_3.png)
 
 2. 安装依赖
 
 ```
 cd hello
-cpnm install
+npm install
 ```
+
+![测试](https://github.com/zhangzhiminxinyang/vue/blob/master/images/vue_exe_4.png)
 
 3. 以默认端口运行
 
@@ -114,3 +163,6 @@ cpnm install
 npm run dev
 ```
 
+![测试](https://github.com/zhangzhiminxinyang/vue/blob/master/images/vue_exe_5.png)
+
+![测试](https://github.com/zhangzhiminxinyang/vue/blob/master/images/vue_exe_6.png)
