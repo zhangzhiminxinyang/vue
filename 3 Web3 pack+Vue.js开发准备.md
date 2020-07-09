@@ -93,3 +93,24 @@
 
    ![测试](https://github.com/zhangzhiminxinyang/vue/blob/master/images/vue_install_2.png)
 
+# 3 运行Vue
+
+1. 运行窗口切换至项目目录，创建一个基于Webpack的项目
+
+```
+vue init webpack hello
+```
+
+2. 安装依赖
+
+```
+cd hello
+cpnm install
+```
+
+3. 以默认端口运行
+
+```
+npm run dev
+```
+
