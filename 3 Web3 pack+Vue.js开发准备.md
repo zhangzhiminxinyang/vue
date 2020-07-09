@@ -83,3 +83,13 @@
 
    ![检测Webpack是否安装成功](https://github.com/zhangzhiminxinyang/vue/blob/master/images/webpack_install_2.png)
 
+## 2.5 全局安装Vue.js
+
+1. 安装Vue.js
+
+    ![安装](https://github.com/zhangzhiminxinyang/vue/blob/master/images/vue_install_1.png)
+
+2. 检测是否安装成功
+
+   ![测试](https://github.com/zhangzhiminxinyang/vue/blob/master/images/vue_install_2.png)
+
