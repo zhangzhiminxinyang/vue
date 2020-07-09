@@ -25,7 +25,7 @@
 
 1. 双击nvm-setup.exe文件，开始安装
 
-![image](./images/NVM_install_1.png)
+![image](https://github.com/zhangzhiminxinyang/vue/blob/master/images/NVM_install_1.png)
 
 2. 选择nvm安装路径
 
