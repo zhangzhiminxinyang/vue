@@ -25,7 +25,7 @@
 
 1. 双击nvm-setup.exe文件，开始安装
 
-![同意许可协议](F:\vue\vue\images\NVM_install_1.png)
+![同意许可协议](images\NVM_install_1.png)
 
 2. 选择nvm安装路径
 
