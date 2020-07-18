@@ -6,6 +6,7 @@ import DirectiveFor from "../components/DirectiveFor";
 import DirectiveIf from "../components/DirectiveIf";
 import DirectiveForIf from "../components/DirectiveForIf";
 import DirectiveBind from "../components/DirectiveBind";
+import Model from "../components/Model";
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
       path:'/bind',
       name:'v-bind的使用',
       component: DirectiveBind
-    }
+    },
+    {
+      path:'/model',
+      name:'v-model双向绑定',
+      component: Model
+    },
   ]
 })
