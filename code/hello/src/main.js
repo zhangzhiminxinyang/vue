@@ -4,6 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+// 增加http支持
+import VueReSource from 'vue-resource';
+Vue.use(VueReSource);
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

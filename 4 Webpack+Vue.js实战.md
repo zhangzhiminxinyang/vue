@@ -342,3 +342,21 @@ v-on用于触发事件，HTML中的标准事件均可
 
 - 可通过表单修改某个变量的值
 - 可通过程序运算修改某个变量的值，并影响页面的展示
+
+# 发送http请求
+
+## 为当前SPA项目添加http请求的支持
+
+修改main.js文件，增加如下代码：
+
+```
+import VueReSource from 'vue-resource';
+Vue.use(VueReSource);
+```
+
+> 若提示VueResource模块找不到，则需要先安装该模块，截图如下
+
+![安装VueResource模块](./images/module_VueResource_install.png)
+
+
+
