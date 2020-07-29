@@ -7,6 +7,7 @@ import DirectiveIf from "../components/DirectiveIf";
 import DirectiveForIf from "../components/DirectiveForIf";
 import DirectiveBind from "../components/DirectiveBind";
 import Model from "../components/Model";
+import BlogList from "../components/BlogList";
 
 Vue.use(Router)
 
@@ -46,6 +47,11 @@ export default new Router({
       path:'/model',
       name:'v-model双向绑定',
       component: Model
+    },
+    {
+      path:'/blog_lists',
+      name:'博客列表',
+      component: BlogList
     },
   ]
 })

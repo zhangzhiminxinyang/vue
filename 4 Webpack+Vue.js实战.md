@@ -360,3 +360,68 @@ Vue.use(VueReSource);
 
 
 
+## 新增页面“博客列表页”，调用http请求
+
+```
+<template>
+    <table>
+      <tr v-for="blog in blogs">
+        <td>{{ blog.title }}</td>
+      </tr>
+    </table>
+</template>
+
+<script>
+    export default {
+        name: "BlogList",
+        data(){
+          return {
+            title:'博客列表页',
+            blogs:[]
+          }
+        },
+      mounted() { //表示页面完成后应该做哪些事情
+          this.$http.get('api/interface/blogs/all').then((response)=>{
+            console.info(response.body)
+            this.blogs = response.body.blogs
+          }, (response)=>{
+            console.error(response)
+          })
+      }
+    }
+</script>
+
+<style scoped>
+  td{
+    text-align:left;
+  }
+</style>
+
+```
+
+
+
+## 设置Vue.js开发服务器的代理
+
+一般情况下，JavaScript在浏览器中是无法发送跨域请求的，因此
+
+- 开发模式下，我们需要在 Vue.js的开发服务器上做转发配置
+- 生产模式下，使用nginx特性解决js跨域问题
+
+开发模式下，开发服务器代理的配置，修改config/index.js文件中的proxyTable内容，如下所示：
+
+```
+proxyTable: {
+      '/api':{
+        target:'http://siwei.me', //1. 对所有以 "api"开头的url做处理
+        changeOrigin:true,  //3. 转发到siwei.me上
+        pathRewrite:{ //2. 把url中的'api'去掉
+          '^/api':''
+        }
+      }
+    },
+```
+
+设置完成后，重启服务器，即可看到效果
+
+![跨域设置](./images/vue_test_1.png)
