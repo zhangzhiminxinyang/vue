@@ -10,6 +10,9 @@ Vue.use(VueReSource);
 
 Vue.config.productionTip = false
 
+//增加post请求,做如下配置后，发出的post请求就不会被浏览器转为option请求了
+Vue.http.options.emulateJSON = true;
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

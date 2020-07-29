@@ -381,6 +381,7 @@ Vue.use(VueReSource);
           }
         },
       mounted() { //表示页面完成后应该做哪些事情
+      	 
           this.$http.get('api/interface/blogs/all').then((response)=>{
             console.info(response.body)
             this.blogs = response.body.blogs
@@ -425,3 +426,24 @@ proxyTable: {
 设置完成后，重启服务器，即可看到效果
 
 ![跨域设置](./images/vue_test_1.png)
+
+## 发起post请求(无效果，需修改)
+
+在main.js中，增加如下代码：
+
+```
+//增加post请求,做如下配置后，发出的post请求就不会被浏览器转为option请求了
+Vue.http.options.emulateJSON = true;
+```
+
+请求代码变为：
+
+```
+this.$http.post('api/interface/blogs/all',{title:'',blog_body:''},{emulateJSON: true}).then((response)=>{
+          console.info(response.body)
+          this.blogs = response.body.blogs
+        },(response)=>{
+          console.error(response )
+        })
+```
+
