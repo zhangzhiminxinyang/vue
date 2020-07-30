@@ -634,3 +634,23 @@ routes:[
 </style>
 ```
 
+## Modifiers（后缀词）
+
+1. .lazy，使用v-model时，不管光标是否离开文本框，只要用户按下键盘上的字符，文本框中的值就会随之变化，某些情况下（比如搜索，更希望用户完全输入完成后，文本框的值在统一发生变化），此时使用lazy可达成此种效果，用法如下：
+
+```
+<input type="text" v-model.lazy="search_value" /> 
+```
+
+2. .number，强制要求输入数字
+
+```
+<input type="number" v-model.number="need_number"/>
+```
+
+3. .trim，强制去掉输入值前后的空格
+
+```
+<input type="text" v-model.trim="trim_space">
+```
+

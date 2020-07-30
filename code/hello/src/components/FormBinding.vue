@@ -22,6 +22,13 @@
 
       </select>
       输入的值：{{ select_value}}
+      <hr/>
+
+      <input type="text" v-model.lazy="search_value" /> 输入的值：{{ search_value}}
+      <hr />
+      <input type="number" v-model.number="need_number"/>
+      <hr/>
+      <input type="text" v-model.trim="trim_space">
     </div>
 </template>
 
@@ -35,6 +42,7 @@
             radio_value:'',
             checkbox_value:'',
             select_value:'C',
+            search_value:'',
             options:[
               {text:'红烧肉', value:'A'},{text:'囊包肉',value:'B'},{text:'水煮鱼',value:'C'}
             ]
