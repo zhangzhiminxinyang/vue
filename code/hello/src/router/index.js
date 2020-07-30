@@ -10,6 +10,7 @@ import Model from "../components/Model";
 import BlogList from "../components/BlogList";
 import Blog from "../components/Blog";
 import TwoWayBinding from "../components/TwoWayBinding";
+import FormBinding from "../components/FormBinding";
 
 Vue.use(Router)
 
@@ -66,6 +67,12 @@ export default new Router({
       path:'/two_way_binding',
       name:'TwoWayBinding',
       component: TwoWayBinding
+    },
+
+    {
+      path:'/form_binding',
+      name:'FormBinding',
+      component: FormBinding
     },
   ]
 })
