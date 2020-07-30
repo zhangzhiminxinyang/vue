@@ -57,7 +57,7 @@ export default new Router({
 
     {
       path:'/blog',
-      name:'博客内容',
+      name:'Blog',
       component: Blog
     },
   ]

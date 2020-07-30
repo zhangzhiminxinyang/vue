@@ -479,3 +479,22 @@ mounted() {
 
 
 
+## 使用事件修改博客列表页的跳转方式
+
+```
+<td @click="show_blog(blog.id)">{{ blog.title }}</td>
+```
+
+```
+ methods:{
+        show_blog:function(blog_id){
+          this.$router.push({name:'Blog',query:{id:blog_id}})
+        }
+      }
+```
+
+>methods:{}中，存放vue页面中使用的事件
+>
+>this.$router.push表示让vue跳转，跳转到name:Blog对应的vue页面，name的名字对应于路由里设置的name的名字。
+>
+>this.$router是vue的内置对象，表示路由

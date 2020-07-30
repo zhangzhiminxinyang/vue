@@ -1,7 +1,7 @@
 <template>
     <table>
       <tr v-for="blog in blogs">
-        <td>{{ blog.title }}</td>
+        <td @click="show_blog(blog.id)">{{ blog.title }}</td>
       </tr>
     </table>
 </template>
@@ -32,6 +32,11 @@
           console.error(response )
         })
         */
+      },
+      methods:{
+        show_blog:function(blog_id){
+          this.$router.push({name:'Blog',query:{id:blog_id}})
+        }
       }
     }
 </script>
