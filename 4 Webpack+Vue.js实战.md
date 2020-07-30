@@ -654,3 +654,44 @@ routes:[
 <input type="text" v-model.trim="trim_space">
 ```
 
+# 10 表单提交
+
+> 在单页应用中，js代码一般不会产生传统意义上的表单提交，多用事件提交数据（即桌面开发思维）
+
+```
+<template>
+    <div>
+      <textarea v-model="content"></textarea>
+      <input type="button" @click="submit" value="留言" />
+    </div>
+</template>
+
+<script>
+    export default {
+        name: "FormSubmit",
+        data (){
+          return {
+            content: ''
+          }
+        },
+      methods:{
+          submit:function(){
+            this.$http.post('/api/interface/blogs/add_comment',{
+              content:this.content
+            }).then((response)=>{
+              alert("提交成功，您所提交的内容是："+this.content)
+            },(reponse)=>{
+              alert("出错了")
+            })
+          }
+      }
+
+    }
+</script>
+
+<style scoped>
+
+</style>
+
+```
+
