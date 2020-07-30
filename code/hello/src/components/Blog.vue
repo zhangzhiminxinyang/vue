@@ -2,6 +2,9 @@
     <div>
       <h1>标题：{{ blog.title}}</h1>
       <p>发布于：{{ blog.created_at}}</p>
+      <div v-html="blog.body">
+        {{ blog.body }}
+      </div>
     </div>
 </template>
 

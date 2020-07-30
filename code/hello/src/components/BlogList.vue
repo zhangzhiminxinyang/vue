@@ -1,7 +1,14 @@
 <template>
     <table>
-      <tr v-for="blog in blogs">
+      <!--tr >
         <td @click="show_blog(blog.id)">{{ blog.title }}</td>
+      </tr-->
+      <tr v-for="blog in blogs">
+        <td>
+          <router-link :to="{name: 'Blog', query:{id: blog.id}}">
+            {{ blog.title}}
+          </router-link>
+        </td>
       </tr>
     </table>
 </template>
