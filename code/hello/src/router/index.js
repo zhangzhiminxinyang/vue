@@ -11,6 +11,7 @@ import BlogList from "../components/BlogList";
 import Blog from "../components/Blog";
 import TwoWayBinding from "../components/TwoWayBinding";
 import FormBinding from "../components/FormBinding";
+import FormSubmit from "../components/FormSubmit";
 
 Vue.use(Router)
 
@@ -73,6 +74,12 @@ export default new Router({
       path:'/form_binding',
       name:'FormBinding',
       component: FormBinding
+    },
+
+    {
+      path:'/form_submit',
+      name:'FormSubmit',
+      component: FormSubmit
     },
   ]
 })
