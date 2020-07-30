@@ -8,6 +8,7 @@ import DirectiveForIf from "../components/DirectiveForIf";
 import DirectiveBind from "../components/DirectiveBind";
 import Model from "../components/Model";
 import BlogList from "../components/BlogList";
+import Blog from "../components/Blog";
 
 Vue.use(Router)
 
@@ -52,6 +53,12 @@ export default new Router({
       path:'/blog_lists',
       name:'博客列表',
       component: BlogList
+    },
+
+    {
+      path:'/blog',
+      name:'博客内容',
+      component: Blog
     },
   ]
 })

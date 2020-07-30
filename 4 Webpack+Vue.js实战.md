@@ -343,7 +343,7 @@ v-on用于触发事件，HTML中的标准事件均可
 - 可通过表单修改某个变量的值
 - 可通过程序运算修改某个变量的值，并影响页面的展示
 
-# 发送http请求
+# 6 发送http请求
 
 ## 为当前SPA项目添加http请求的支持
 
@@ -447,3 +447,14 @@ this.$http.post('api/interface/blogs/all',{title:'',blog_body:''},{emulateJSON: 
         })
 ```
 
+# 7 不同页面间传递参数
+
+### 传统Web开发页面传递参数的两种方式：
+
+- url
+- 表单
+
+### Vue.js中参数传递的两种方式
+
+- url
+- Vue.js内部机制
