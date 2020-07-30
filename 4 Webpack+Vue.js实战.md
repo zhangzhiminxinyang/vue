@@ -511,3 +511,70 @@ mounted() {
 </tr>
 ```
 
+## 获取参数的两种方式
+
+### query
+
+若url形式为：blogs?id=3，则获取路由方式为：this.$router.query.id
+
+### params
+
+若url形式为：/#/blogs/3，即对应的路由是：
+
+```
+routes:[
+{
+	path:'/blog/:id'
+}
+]
+```
+
+则获取参数方式为：this.$router.params.id
+
+# 8 双向绑定
+
+双向绑定：若某个变量定义于<script>，需要展现在<template>中的话：
+
+- 如果在代码层面进行修改，页面的值会发生变化
+- 如果在页面进行修改（如表单控件），需要将变化体现在<template>中
+
+```
+<template>
+    <div>
+      <p>页面上的值：</p>
+      <p>通过视图层，修改my_value：</p>
+      <input v-model="my_value" style="width:400px;" />
+      <hr/>
+      <input type="button" @click="change_my_value_by_code()" value="通过控制代码修改my_value" />
+      <hr/>
+      <input type="button" @click="show_my_value()" value="显示代码中的my_value" />
+    </div>
+</template>
+
+<script>
+    export default {
+        name: "TwoWayBinding",
+        data (){
+          return {
+            my_value: '默认值'
+          }
+        },
+      methods:{
+          show_my_value:function () {
+            alert('my_value:'+this.my_value);
+          },
+          change_my_value_by_code:function(){
+            this.my_value += ", 在代码中做修改，666"
+          }
+      }
+    }
+</script>
+
+<style scoped>
+
+</style>
+
+```
+
+- 在代码<script>中访问变量的值使用this.my_value
+- 在<template>中访问，使用 <input v-model=my_value/>

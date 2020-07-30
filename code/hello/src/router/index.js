@@ -9,6 +9,7 @@ import DirectiveBind from "../components/DirectiveBind";
 import Model from "../components/Model";
 import BlogList from "../components/BlogList";
 import Blog from "../components/Blog";
+import TwoWayBinding from "../components/TwoWayBinding";
 
 Vue.use(Router)
 
@@ -59,6 +60,12 @@ export default new Router({
       path:'/blog',
       name:'Blog',
       component: Blog
+    },
+
+    {
+      path:'/two_way_binding',
+      name:'TwoWayBinding',
+      component: TwoWayBinding
     },
   ]
 })
