@@ -458,3 +458,24 @@ this.$http.post('api/interface/blogs/all',{title:'',blog_body:''},{emulateJSON: 
 
 - url
 - Vue.js内部机制
+
+## 博客详情页的显示
+
+```
+data (){
+          return {
+            //初始化blog用到的变量
+            blog:{}
+          }
+        },
+mounted() {
+          this.$http.get('api/interface/blogs/show?id='+this.$route.query.id).then((response)=>{
+            this.blog = response.body.result
+          }, (response)=>{
+            console.error(reponse)
+          })
+}
+```
+
+
+
